@@ -4,7 +4,12 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class GenericLibrary {
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import io.appium.java_client.MobileElement;
+
+
+public class GenericLibrary extends BaseLib {
 	
 	/*
 	 * Description: To read the basic environment settings data from
@@ -25,4 +30,16 @@ public class GenericLibrary {
 		}
 		return sValue;
 	}
+	
+	
+	
+	/**
+	 * Description: To wait until an element visible on app page
+	 * @param ele
+	 */
+//	public static void waitUntilElementVisible(MobileElement ele) {
+//		gv.wait.until(ExpectedConditions.visibilityOf(element))
+//		
+//	}
+	
 }
