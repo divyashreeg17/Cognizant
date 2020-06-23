@@ -99,4 +99,27 @@ public class MobileActionUtil {
 
 		}
 	}
+	
+	
+	/**
+	 * 
+	 * Description: This method to scroll from bottom to top side based on device height and
+	 * width
+	 */
+	public static void swipeBottomToTop(int value, double startY, double endY, AndroidDriver driver) throws Exception{
+		try {
+			Thread.sleep(1000);
+			System.out.println("inside swipe");
+			for (int i = 1; i <= value; i++) {
+				Dimension dSize = driver.manage().window().getSize();
+				int starty = (int) (dSize.height * startY);
+				int endy = (int) (dSize.height * endY);
+				int startx = dSize.width / 2;
+				driver.swipe(startx, starty, startx, endy, 1000);
+
+			}
+		} catch (Exception e) {
+
+		}
+	}
 }

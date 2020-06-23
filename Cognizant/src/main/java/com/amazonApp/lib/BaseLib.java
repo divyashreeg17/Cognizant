@@ -43,8 +43,13 @@ public class BaseLib {
 		System.out.println("http://127.0.0.1:"+gv.port+"/wd/hub");
 		gv.driver = new AndroidDriver(new URL("http://127.0.0.1:"+gv.port+"/wd/hub"), gv.capabilities);
 		gv.driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		
+		
+		
 			
 	}
+	
+	
 	
 	@AfterClass
 	public void shutDownApp()
